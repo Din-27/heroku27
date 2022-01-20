@@ -1,0 +1,92 @@
+<html>
+  <head>
+    <title>Creating Blog Page</title>
+    <link rel="stylesheet" href="../public/assets/css/blog detail.css">
+  </head>
+ <body>
+      
+ <nav>
+
+        <img src="../public/assets/images/my-logo.png" alt="Logo" style="cursor: pointer;
+            width: 90px;
+            height: 40px;
+            padding-left: 30px;
+            padding-top: 10px;
+            ">
+  
+            <div class="kiri">
+                {{#if isLogin}}
+                <ul>
+                    <li> <a href="/register">Hi,{{user.name}}</a> </li>
+                    <li class="blog"><a href="/login">Logout</a></li>
+                    <!-- <li class="upload"><a href="upload.html">upload</a></li> -->
+                </ul>
+                {{else}}
+                <ul>
+                    <li> <a href="/register">Register</a> </li>
+                    <li class="blog"><a href="/login">Login</a></li>
+                    <!-- <li class="upload"><a href="upload.html">upload</a></li> -->
+                </ul>
+                {{/if}}
+                <div class="mid">
+                <ul>
+                    <li> <a href="/">Home</a> </li>
+                    <li class="blog"><a href="/blog">Blog</a></li>
+                    <!-- <li class="upload"><a href="upload.html">upload</a></li> -->
+                </ul>
+                 </div>
+            
+            </div>
+  
+        <div class="kanan">
+            <a href="/contact">Contact</a>
+        </div>
+  
+    </nav>
+
+
+  
+    <div class="blog">
+      {{#if isLogin}}
+      <div class="btn-create">
+        <a style="text-decoration: none; color:white;" href="/create">Create Blog</a>
+      </div>
+      {{/if}}
+
+      <div id="contents" class="blog-list">
+        
+        {{#each blogs}}
+        <div class="blog-list-item">
+          <div class="blog-image">
+            <img src="../public/assets/images/download.jpg" alt="" />
+          </div>
+          <div class="blog-content">
+            {{#if ../isLogin}}
+            <div class="btn-group">
+              <a href="/edit/{{@index}}" class="btn-edit" style="text-decoration: none; color:black; background-color:grey;">Edit Post</button>
+              <a href="/delete-blog/{{this.id}}" class="btn-post" style="text-decoration: none;">Delete Blog</button>
+            </div>
+            {{/if}}
+            <h1>
+              <a href="/blog-detail/{{this.id}}" target="_blank">{{this.title}}</a>
+            </h1>
+            <div class="detail-blog-content">
+              {{this.postAt}} | <!--{{this.author}}-->Herdiyana Firmansyah
+            </div>
+            <p>
+              {{this.content}}
+            </p>
+
+            <div style="text-align: right;">
+                <span style="font-size: 10px; color: rgb(255, 255, 255)">
+                  {{this.id}}
+                </span>
+            </div>
+
+          </div>
+        </div>
+        {{/each}}
+      </div>
+    </div>
+  </body>
+</html>

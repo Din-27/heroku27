@@ -1,0 +1,58 @@
+<html>
+  <head>
+    <title>Creating Blog Page</title>
+    <link rel="stylesheet" href="../public/assets/css/blog detail.css">
+  </head>
+  <body>
+    
+ <nav>
+
+        <img src="../public/assets/images/my-logo.png" alt="Logo" style="cursor: pointer;
+            width: 90px;
+            height: 40px;
+            padding-left: 30px;
+            padding-top: 10px;
+            ">
+  
+            <div class="kiri">
+                {{#if isLogin}}
+                <ul>
+                    <li> <a href="/register">Hi,{{user.name}}</a> </li>
+                    <li class="blog"><a href="/login">Logout</a></li>
+                    <!-- <li class="upload"><a href="upload.html">upload</a></li> -->
+                </ul>
+                {{else}}
+                <ul>
+                    <li> <a href="/register">Register</a> </li>
+                    <li class="blog"><a href="/login">Login</a></li>
+                    <!-- <li class="upload"><a href="upload.html">upload</a></li> -->
+                </ul>
+                {{/if}}
+                <div class="mid">
+                <ul>
+                    <li> <a href="/">Home</a> </li>
+                    <li class="blog"><a href="/blog">Blog</a></li>
+                    <!-- <li class="upload"><a href="upload.html">upload</a></li> -->
+                </ul>
+                 </div>
+            
+            </div>
+  
+        <div class="kanan">
+            <a href="/contact">Contact</a>
+        </div>
+  
+    </nav>
+
+    <div class="blog-detail">
+      <div class="blog-detail-container">
+        <h1>{{blog.title}}</h1>
+        <div class="author">{{blog.postAt}} | {{blog.author}}</div>
+        <img src="../public/assets/images/download.jpg" alt="000" />
+        <p>
+            {{blog.content}}
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

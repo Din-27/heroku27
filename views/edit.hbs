@@ -1,0 +1,87 @@
+<html>
+  <head>
+    <title>Blog Page</title>
+    <link rel="stylesheet" href="../public/assets/css/style-blog.css">
+  </head>
+  <body>
+
+ <nav>
+
+        <img src="../public/assets/images/my-logo.png" alt="Logo" style="cursor: pointer;
+            width: 90px;
+            height: 40px;
+            padding-left: 30px;
+            padding-top: 10px;
+            ">
+  
+            <div class="kiri">
+                {{#if isLogin}}
+                <ul>
+                    <li> <a href="/register">Hi,{{user.name}}</a> </li>
+                    <li class="blog"><a href="/login">Logout</a></li>
+                    <!-- <li class="upload"><a href="upload.html">upload</a></li> -->
+                </ul>
+                {{else}}
+                <ul>
+                    <li> <a href="/register">Register</a> </li>
+                    <li class="blog"><a href="/login">Login</a></li>
+                    <!-- <li class="upload"><a href="upload.html">upload</a></li> -->
+                </ul>
+                {{/if}}
+                <div class="mid">
+                <ul>
+                    <li> <a href="/">Home</a> </li>
+                    <li class="blog"><a href="/blog">Blog</a></li>
+                    <!-- <li class="upload"><a href="upload.html">upload</a></li> -->
+                </ul>
+                 </div>
+            
+            </div>
+  
+        <div class="kanan">
+            <a href="/contact">Contact</a>
+        </div>
+  
+    </nav>
+
+    <div class="blog">
+
+      
+
+      <div class="blog-form">
+        <div class="form-container">
+          <form action="/edit/{{id}}" method="post" enctype="multipart/form-data">
+            <h1 style="border-radius: 10px;
+            color: white;
+            text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.829);
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.829);"
+            >Create Post Blog</h1>
+            <div>
+              <label for="input-blog-title">Title</label>
+              <input id="input-blog-title" name="updateTitle" value="{{blog.title}}" />
+            </div>
+            <div>
+              <label for="input-blog-content">Content</label>
+              <textarea id="input-blog-content" style="resize: none;" name="updateContent" value="{{blog.content}}"></textarea>
+            </div>
+            <div>
+              <label>Upload Image</label>
+              <div class="input-blog-image-group">
+                <label for="updateImage">
+                  <p>Attach File</p>
+                  <img src="../public/assets/images/file.png" alt="file" />
+                </label>
+                <input name="updateImage" type="file" id="updateImage" hidden />
+              </div>
+            </div>
+            <div class="button-group">
+              <button style="text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.829);
+              box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.829);" type="submit">Post Blog</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="../public/assets/js/web-blog.js"></script>
+  </body>
+</html>

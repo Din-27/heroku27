@@ -1,0 +1,113 @@
+<html>
+
+<head>
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="../public/assets/css/style-index.css">
+    <script src="../public/assets/js/form.js"></script>
+</head>
+
+<body>
+    
+ <nav>
+
+        <img src="../public/assets/images/my-logo.png" alt="Logo" style="cursor: pointer;
+            width: 90px;
+            height: 40px;
+            padding-left: 30px;
+            padding-top: 10px;
+            ">
+  
+            <div class="kiri">
+                {{#if isLogin}}
+                <ul>
+                    <li> <a href="/register">Hi,{{user.name}}</a> </li>
+                    <li class="blog"><a href="/login">Logout</a></li>
+                    <!-- <li class="upload"><a href="upload.html">upload</a></li> -->
+                </ul>
+                {{else}}
+                <ul>
+                    <li> <a href="/register">Register</a> </li>
+                    <li class="blog"><a href="/login">Login</a></li>
+                    <!-- <li class="upload"><a href="upload.html">upload</a></li> -->
+                </ul>
+                {{/if}}
+                <div class="mid">
+                <ul>
+                    <li> <a href="/">Home</a> </li>
+                    <li class="blog"><a href="/blog">Blog</a></li>
+                    <!-- <li class="upload"><a href="upload.html">upload</a></li> -->
+                </ul>
+                 </div>
+            
+            </div>
+  
+        <div class="kanan">
+            <a href="/contact">Contact</a>
+        </div>
+  
+    </nav>
+
+    <h1 class="title">Tell us about your problem below !</h1>
+
+    <form>
+
+        <div>
+            <label for="name">Name</label>
+            <input id="name" type="text" class="name">
+        </div>
+
+        <div>
+            <label for="email">Email</label>
+            <input id="email" type="email" class="email">
+        </div>
+
+        <div>
+            <label for="phone">Phone Number</label>
+            <input id="phone" type="number">
+        </div>
+
+
+        <div>
+            <label for="subject">Subject</label>
+            <select id="subject">
+                <option>Privacy Policy</option>
+                <option>Problem With Our Site</option>
+            </select>
+        </div>
+
+
+        <div>
+            <p style="margin: 5px 0px; font-size: 20px;
+            font-size: 30px">Problem</p>
+            <div style="font-size: 15px;">
+                <ul>
+                    <li  style="margin: -20px;">
+                        <div class="checkbox">
+                            <label class="html" for="skillHtml">HTML</label>
+                            <input type="checkbox" id="skillHtml" value="HTML">
+                        </div>
+                    </li>
+                    <li style="margin: -20px;">
+                        <div>
+                        <label class="css" for="skillCss">CSS</label>
+                        <input type="checkbox" id="skillCss" value="CSS">
+                    </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div>
+            <label for="message">Your Message</label>
+            <textarea id="message" style="resize: none;"></textarea>
+        </div>
+
+        <button type="button" onclick="submitData()">
+        <a href="mailto:herdiyanafirmansyah27@gmail.com?subject=Test subject&body=Hallo Nama Saya" style="color: white;">Submit</a></button>
+    </form>
+
+
+
+</body>
+
+</html>

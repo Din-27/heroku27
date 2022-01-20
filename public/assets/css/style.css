@@ -1,0 +1,30 @@
+.bg-orange {
+    background-color: orangered;
+}
+
+.text-color{
+    color: orangered !important;
+}
+
+.navbar {
+    height: 7vh;
+    box-shadow: 0px  0px 20px rgb(0, 0, 0);
+}
+
+.bg-secondary {
+    height: 93vh;
+    
+}
+
+.container-form{
+    width: 400px;
+}
+
+.form-control {
+    resize: none;
+}
+
+/* .title {
+    background-color: rgb(216, 58, 0);
+    text-shadow: 0 0 20px black;
+} */

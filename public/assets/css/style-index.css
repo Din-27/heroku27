@@ -1,0 +1,204 @@
+* {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    margin: 0;
+    background-size: 3000px;
+    background-position: center;
+    background-image: url(../images/background\ pink.png);
+}
+
+nav {
+    background-color:rgb(39, 39, 39);
+    display: flex;
+    background-position: left;
+    height: 10vh;
+    box-shadow: 0px 0px 30px rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+nav .kiri {
+    flex: 50%;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+}
+
+nav .kiri li {
+    display: inline;
+    margin: 0px 15px
+}
+
+nav .kiri ul li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    padding: 12px;
+    border-radius: 100%;
+    /* text-shadow:0px 0px 5px rgba(255, 255, 255, 0.829); */
+}
+
+
+nav .kanan {
+    flex: 10%;
+    display: flex;
+    padding: 5px;
+    justify-content: right;
+    align-items: center;
+    padding-right: 80px;
+}
+
+nav .kanan a {
+    color: rgb(255, 255, 255);
+    padding: 8px 5px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+nav .mid {
+    flex: 15%;
+    padding-left: 100px;
+    justify-content: left;
+    align-items: left;
+    font-size: 17px;
+}
+
+nav .mid li {
+    display: inline;
+    margin: 0px 30px
+}
+
+nav .mid ul li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    border-radius: 100%;
+    /* text-shadow:0px 0px 5px rgba(255, 255, 255, 0.829); */
+}
+
+.container {
+    display: flex;
+    height: 95vh;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+}
+
+.container .section {
+    display: flex;
+    width: 100%;
+    height: 700px;
+    /* text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.829); */
+    /* box-shadow: 0px 0px 10px rgb(106, 106, 106); */
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.section .kiri {
+    flex: 25%;
+}
+
+.creating-card {
+    border: 2px;
+    width: 300px;
+    margin: 20px auto;
+    padding: 20px;
+    font-family: cursive;
+    font-weight: 400;
+    /* text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.829); */
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.816);
+    background-color: rgba(39, 39, 39, 0.789);
+    border-radius: 10px;
+}
+
+.section .kanan {
+    flex: 50%;
+    padding: 20px;
+    margin: 50px auto;
+    font-weight: bold;
+    /* text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.829); */
+}
+
+.section .kanan p {
+    /* text-shadow:0px 0px 5px rgba(255, 255, 255, 0.829); */
+    color: rgb(206, 206, 206);
+    text-align: left;
+    padding-right: 30px;
+    padding-bottom: 50px;
+}
+
+.section .bawah {
+    display: flex;
+    color: rgb(194, 194, 194);
+    justify-content: center;
+}
+
+.section .bawah div {
+    margin-top: 10px;
+    margin-right: 100px;
+    /* box-shadow: 0px 0px 8px rgb(0, 0, 0); */
+    border-radius: 100%;
+    background-color:rgba(255, 255, 255, 0.178);
+}
+
+.skill-container div img {
+    flex: 1;
+    width: 50px;
+    height: 20px;
+}
+
+form {
+    width:300px;
+    margin: 20px auto;
+    font-size: 30px;
+    text-align: left;
+    color: rgb(255, 255, 255);
+    padding-bottom: 50px;
+    /* text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.829); */
+}
+
+input[type=text],input[type=email],input[type=number], select, textarea {
+    box-shadow: 0px 0px 40px black;
+    background-color: rgba(255, 255, 255, 0.234);
+    border-radius: 5px;
+    width: 100%;
+    padding: 7px;
+    margin-top: 4px;
+    border: 1px solid rgba(0, 0, 0, 0);
+    box-sizing: border-box;
+    margin: 10px 0;
+    color: rgb(250, 250, 250);
+}
+
+input[type=checkbox] {
+    margin: 15px 0 25px 0;
+}
+
+button {
+    padding: 10px 20px; 
+    margin-top:  15px;
+    border-radius: 4px; 
+    background-color: rgb(163, 0, 0);
+    color:rgb(255, 255, 255);
+    border: none;
+    cursor:pointer;
+    font-size: 20px;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.829);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.829);
+    
+}
+
+button a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+h1[class=title] {
+    text-align: center;
+    background-color: rgb(163, 0, 0);
+    margin: 50px 400px 0px 400px;
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.829);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.829);
+}
+
